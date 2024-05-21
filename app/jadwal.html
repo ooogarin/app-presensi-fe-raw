@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Presensi</title>
+  <title>Jadwal</title>
 </head>
 <body>
     <div id="app" class="relative flex w-screen h-screen">
@@ -33,24 +33,24 @@
                         </li>
             
                         <li>
-                            <a href="#" class="flex bg-blue-600 px-4 py-3 rounded-xl">
-                                <svg class="w-6 h-6 stroke-2 stroke-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a href="#" class="flex bg-white hover:bg-slate-100 px-4 py-3 rounded-xl">
+                                <svg class="w-6 h-6 stroke-2 stroke-slate-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>                                
-                                <span class="ml-4 font-bold text-left text-white grow">Presensi</span>                         
+                                <span class="ml-4 font-bold text-left text-slate-600 grow">Presensi</span>                         
                             </a>
                         </li>
             
                         <li>
-                            <a href="#" class="flex bg-white hover:bg-slate-100 px-4 py-3 rounded-xl">
-                                <svg class="w-6 h-6 stroke-2 stroke-slate-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a href="#" class="flex bg-blue-600 px-4 py-3 rounded-xl">
+                                <svg class="w-6 h-6 stroke-2 stroke-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M16 2V6" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M8 2V6" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M3 10H21" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span class="ml-4 font-bold text-left text-slate-600 grow">Jadwal</span>                         
+                                <span class="ml-4 font-bold text-left text-white grow">Jadwal</span>                         
                             </a>
                         </li>
             
@@ -303,13 +303,12 @@
             <div class="flex flex-col space-y-4 px-8 py-4 w-full overflow-y-auto">
                 <!-- title page -->
                 <div class="p-4 w-full">
-                    <h1 class="mb-2 font-bold text-3xl">Presensi</h1>
+                    <h1 class="mb-2 font-bold text-3xl">Jadwal</h1>
                     <div class="flex">
-                        <a href="#" class="text-blue-600">Presensi</a>
+                        <a href="#" class="text-blue-600">Jadwal</a>
                         <svg class="w-6 h-6 stroke-2 stroke-slate-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <span>Detail Presensi</span>
                     </div>
                 </div>
 
@@ -320,7 +319,7 @@
                             <svg class="w-6 h-6 stroke-2 stroke-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                                         
-                            <span class="font-bold text-xl">Filter Presensi</span>
+                            <span class="font-bold text-xl">Filter Jadwal</span>
                         </div>
 
                         <button @click="isFilterWrap = !isFilterWrap" :class="{'rotate-180': isFilterWrap}" class="flex items-center border-2 bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring focus:ring-blue-300 justify-center active:bg-blue-100 border-blue-600 rounded-full w-12 h-12 font-medium text-blue-600">
@@ -382,7 +381,7 @@
                                     </div>                    
                                 </div>
                             </div>
-                            <div class="flex flex-col px-6 pb-4 w-1/2 md:w-full">
+                            <div class="flex flex-col px-6 pb-4 w-1/2 md:w-8/12">
                                 <label for="" class="mb-2 font-bold text-base">Personil</label>
                                 <div class="relative flex items-center">
                                     <select name="" id="" class="border-slate-600 pr-12 pl-4 border rounded-xl w-full h-12 focus:outline-slate-600 focus:outline-offset-1 cursor-pointer">
@@ -400,7 +399,19 @@
                                     </div>                    
                                 </div>
                             </div>
-                            
+                            <div class="flex flex-col px-6 pb-4 w-1/2 md:w-4/12">
+                                <label for="" class="mb-2 font-bold text-base">Status Jadwal</label>
+                                <div class="flex items-center space-x-4 pl-2 h-12">
+                                    <div class="flex gap-2">
+                                        <input type="checkbox" class="w-6 h-6">
+                                        <label for="" class="w-10 font-medium text-slate-800">Aktif</label>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <input type="checkbox" class="w-6 h-6">
+                                        <label for="" class="w-10 font-medium text-slate-800">Nonaktif</label>
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
     
                         <div class="flex justify-end space-x-6 px-8">
@@ -434,10 +445,10 @@
                             <tr class="bg-slate-100 border-b">
                                 <th class="px-2 py-4 border-r w-14 text-slate-800">No.</th>
                                 <th class="px-2 py-4 border-r text-slate-800">Nama</th>
-                                <th class="px-2 py-4 border-r text-slate-800">Tanggal Presensi</th>
+                                <th class="px-2 py-4 border-r text-slate-800">Tanggal Jadwal</th>
                                 <th class="px-2 py-4 border-r text-slate-800">Shifting</th>
-                                <th class="px-2 py-4 border-r text-slate-800">Jam Mulai</th>
-                                <th class="px-2 py-4 border-r text-slate-800">Jam Selesai</th>
+                                <th class="px-2 py-4 border-r text-slate-800">Kode Locator</th>
+                                <th class="px-2 py-4 border-r text-slate-800">Status Jadwal</th>
                                 <th class="px-2 py-4 w-28 text-slate-800">Aksi</th>
                             </tr>
                             <tr v-for="(item, index) in data" class="odd:bg-slate-100 even:bg-white border-b">
@@ -445,20 +456,44 @@
                                 <td class="px-2 py-4 border-r font-medium text-slate-800">{{item.nama}}</td>
                                 <td class="px-2 py-4 border-r font-medium text-slate-800">{{item.tanggal}}</td>
                                 <td class="px-2 py-4 border-r font-medium text-slate-800">{{item.shift}}</td>
-                                <td class="px-2 py-4 border-r font-medium text-slate-800">{{item.start}}</td>
-                                <td class="px-2 py-4 border-r font-medium text-slate-800">{{item.end}}</td>
+                                <td class="px-2 py-4 border-r font-medium text-blue-600">{{item.locator_code}}</td>
+                                <td class="px-2 py-4 border-r font-medium text-slate-800">
+                                    <div class="relative">
+                                        <span v-if="item.status == 'ACT'" class="before:block before:left-2.5 before:absolute flex items-center before:content-[''] bg-green-100 before:bg-green-500 px-3 py-0.5 pl-6 rounded-full before:rounded-full w-fit before:w-2 before:h-2 text-green-700 text-sm">Aktif</span>
+                                        <span v-if="item.status == 'NACT'" class="before:block before:left-2.5 before:absolute flex items-center before:content-[''] bg-red-100 before:bg-red-500 px-3 py-0.5 pl-6 rounded-full before:rounded-full w-fit before:w-2 before:h-2 text-red-700 text-sm">Nonaktif</span>
+                                    </div>
+                                </td>
                                 <td class="px-2 font-medium text-center text-slate-800">
-                                    <button class="bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring focus:ring-green-300 justify-center active:bg-blue-100 border rounded-full">
-                                        <div class="flex justify-center items-center w-10 h-10">
-                                            <svg class="w-6 h-6 stroke-2 stroke-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M14 2V8H20" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M16 13H8" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M16 17H8" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M10 9H9H8" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>                                        
-                                        </div>
-                                    </button>
+                                    <div class="flex gap-2">
+                                        <button class="bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring focus:ring-green-300 justify-center active:bg-blue-100 border rounded-full">
+                                            <div class="flex justify-center items-center w-10 h-10">
+                                                <svg class="w-6 h-6 stroke-2 stroke-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14 2V8H20" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 13H8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M16 17H8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10 9H9H8" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                                        
+                                            </div>
+                                        </button>
+                                        <button class="bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring focus:ring-green-300 justify-center active:bg-blue-100 border rounded-full">
+                                            <div class="flex justify-center items-center w-10 h-10">
+                                                <svg class="stroke-yellow-600 w-6 h-6 stroke-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V20C2 20.5304 2.21071 21.0391 2.58579 21.4142C2.96086 21.7893 3.46957 22 4 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V13" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M18.5 2.50001C18.8978 2.10219 19.4374 1.87869 20 1.87869C20.5626 1.87869 21.1022 2.10219 21.5 2.50001C21.8978 2.89784 22.1213 3.4374 22.1213 4.00001C22.1213 4.56262 21.8978 5.10219 21.5 5.50001L12 15L8 16L9 12L18.5 2.50001Z" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                                      
+                                            </div>
+                                        </button>
+                                        <button class="bg-slate-50 hover:bg-slate-100 focus:outline-none focus:ring focus:ring-green-300 justify-center active:bg-blue-100 border rounded-full">
+                                            <div class="flex justify-center items-center w-10 h-10">
+                                                <svg class="w-6 h-6 stroke-2 stroke-red-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6H5H21" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                                                      
+                                            </div>
+                                        </button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr class="bg-white h-20">
@@ -517,79 +552,79 @@
         const isKaryawanWrap = ref(true); // toggle sidebar: karyawan
         const isShiftWrap = ref(true); // toggle sidebar: shift
 
-        
+        // data table
         const data = [
             {
                 "nama": "Ilham Garin Nugroho",
                 "tanggal": "13 Maret 2024",
                 "shift": "DMS - S1 (08:00 - 16:00) - NRM",
-                "start": "08:15:00",
-                "end": "16:00:00"
-            },
-            {
-                "nama": "Alya Nadhira",
-                "tanggal": "14 Maret 2024",
-                "shift": "DMS - S2 (09:00 - 17:00) - NRM",
-                "start": "09:00:00",
-                "end": "17:00:00"
-            },
-            {
-                "nama": "Raka Pratama",
-                "tanggal": "15 Maret 2024",
-                "shift": "DMS - S3 (10:00 - 18:00) - NRM",
-                "start": "10:15:00",
-                "end": "18:00:00"
-            },
-            {
-                "nama": "Dina Maharani",
-                "tanggal": "16 Maret 2024",
-                "shift": "DMS - S1 (08:00 - 16:00) - NRM",
-                "start": "08:00:00",
-                "end": "16:00:00"
+                "locator_code": "CODE1234567890",
+                "status": "ACT"
             },
             {
                 "nama": "Budi Santoso",
-                "tanggal": "17 Maret 2024",
-                "shift": "DMS - S2 (09:00 - 17:00) - NRM",
-                "start": "09:30:00",
-                "end": "17:00:00"
+                "tanggal": "14 Maret 2024",
+                "shift": "DMS - S2 (16:00 - 00:00) - NRM",
+                "locator_code": "CODE1234567891",
+                "status": "NACT"
             },
             {
-                "nama": "Citra Lestari",
-                "tanggal": "18 Maret 2024",
-                "shift": "DMS - S3 (10:00 - 18:00) - NRM",
-                "start": "10:00:00",
-                "end": "18:00:00"
+                "nama": "Ayu Lestari",
+                "tanggal": "15 Maret 2024",
+                "shift": "DMS - S3 (00:00 - 08:00) - NRM",
+                "locator_code": "CODE1234567892",
+                "status": "ACT"
+            },
+            {
+                "nama": "Dedi Prasetyo",
+                "tanggal": "16 Maret 2024",
+                "shift": "DMS - S1 (08:00 - 16:00) - NRM",
+                "locator_code": "CODE1234567893",
+                "status": "NACT"
+            },
+            {
+                "nama": "Eka Kurniawan",
+                "tanggal": "17 Maret 2024",
+                "shift": "DMS - S2 (16:00 - 00:00) - NRM",
+                "locator_code": "CODE1234567894",
+                "status": "ACT"
             },
             {
                 "nama": "Fajar Nugraha",
+                "tanggal": "18 Maret 2024",
+                "shift": "DMS - S3 (00:00 - 08:00) - NRM",
+                "locator_code": "CODE1234567895",
+                "status": "NACT"
+            },
+            {
+                "nama": "Gita Pramudita",
                 "tanggal": "19 Maret 2024",
                 "shift": "DMS - S1 (08:00 - 16:00) - NRM",
-                "start": "08:10:00",
-                "end": "16:00:00"
+                "locator_code": "CODE1234567896",
+                "status": "ACT"
             },
             {
-                "nama": "Gina Safitri",
+                "nama": "Hadi Wijaya",
                 "tanggal": "20 Maret 2024",
-                "shift": "DMS - S2 (09:00 - 17:00) - NRM",
-                "start": "09:45:00",
-                "end": "17:00:00"
+                "shift": "DMS - S2 (16:00 - 00:00) - NRM",
+                "locator_code": "CODE1234567897",
+                "status": "NACT"
             },
             {
-                "nama": "Hendra Setiawan",
+                "nama": "Indra Saputra",
                 "tanggal": "21 Maret 2024",
-                "shift": "DMS - S3 (10:00 - 18:00) - NRM",
-                "start": "10:05:00",
-                "end": "18:00:00"
+                "shift": "DMS - S3 (00:00 - 08:00) - NRM",
+                "locator_code": "CODE1234567898",
+                "status": "ACT"
             },
             {
-                "nama": "Indah Permatasari",
+                "nama": "Joko Susanto",
                 "tanggal": "22 Maret 2024",
                 "shift": "DMS - S1 (08:00 - 16:00) - NRM",
-                "start": "08:20:00",
-                "end": "16:00:00"
+                "locator_code": "CODE1234567899",
+                "status": "NACT"
             }
-        ]
+        ];
 
         // Define the component or app
         const App = {
