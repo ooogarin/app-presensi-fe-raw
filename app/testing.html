@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Toggle</title>
+  <style>
+    .sidebar {
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transition: transform 0.3s ease;
+    }
+    .sidebar.hidden {
+      transform: translateX(-100%);
+    }
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    .toggle-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div :class="['sidebar', { hidden: isSidebarHidden }]">
+      <h2>Sidebar</h2>
+      <p>Some content here...</p>
+    </div>
+    <div class="content">
+      <button class="toggle-button" @click="toggleSidebar">
+        {{ isSidebarHidden ? 'Show' : 'Hide' }} Sidebar
+      </button>
+      <p>Main content here...</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        isSidebarHidden: false
+      },
+      methods: {
+        toggleSidebar() {
+          this.isSidebarHidden = !this.isSidebarHidden;
+        }
+      }
+    });
+  </script>
+</body>
+</html>

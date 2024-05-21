@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue with CDN</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Belajar Vue</h1>
+        <p>Count: {{ count }}</p>
+        <button @click="increment">Increment</button>
+    </div>
+
+    <!-- Include Vue 3 from CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        // Create Vue app
+        const { createApp, ref } = Vue;
+
+        // Define the component or app
+        const App = {
+            setup() {
+                const count = ref(0);
+
+                const increment = () => {
+                    count.value++;
+
+                    console.log('object :>> ', count.value);
+                };
+
+                return { count, increment };
+            }
+        };
+
+        // Mount the app
+        createApp(App).mount('#app');
+    </script>
+</body>
+</html>
