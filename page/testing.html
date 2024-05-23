@@ -9,7 +9,7 @@
 <body>
     <div id="app" class="relative w-screen h-screen">
         <!-- sidebar -->
-        <aside :class="{'w-64': isSidebarVisible, '-translate-x-full': !isSidebarVisible }" class="top-0 left-0 z-10 absolute shadow-md h-screen transition-all duration-1000">
+        <aside :class="{'-translate-x-full': !isSidebarVisible }" class="top-0 left-0 z-10 absolute shadow-md w-64 h-screen transition-all duration-1000">
             <div class="flex flex-col w-64 h-full">
                 <!-- logo -->
                 <a href="" class="sticky shadow-md">
